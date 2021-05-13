@@ -1,0 +1,21 @@
+<h1 class="mt-5">Detalle de Usuario</h1>
+<button class="btn btn-primary me-2" type="button" (click)="showUsersList()">Lista de Usuarios</button>
+<button class="btn btn-success" type="button" (click)="editUser()" *ngIf="!available">Editar Usuario</button>
+<button class="btn btn-success" type="button" (click)="saveUser()" *ngIf="available">Save</button>
+<hr>
+<div class="mb-3">
+  <label for="name" class="form-label">Name</label>
+  <input class="form-control" type="text" id="name" aria-describedby="nameHelp" [value]="user?.name" [readonly]="!available">
+</div>
+<div class="mb-3">
+  <label for="email" class="form-label">Email</label>
+  <input class="form-control" type="email" id="email" aria-describedby="emailHelp" [value]="user?.email" [readonly]="!available">
+</div>
+<div class="mb-3">
+  <label for="phone" class="form-label">Teléfono</label>
+  <input class="form-control" type="text" id="phone" aria-describedby="phoneHelp" [value]="user?.phone" [readonly]="!available">
+</div>
+<div class="mb-3">
+  <label for="website" class="form-label">Website</label>
+  <input class="form-control" type="text" id="website" aria-describedby="websiteHelp" [value]="user?.website" [readonly]="!available">
+</div>
